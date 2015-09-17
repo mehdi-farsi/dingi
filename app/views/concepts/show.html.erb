@@ -1,0 +1,27 @@
+<section class="container-fluid">
+  <p id="notice"><%= notice %></p>
+
+  <%= render 'form' %>
+
+  <% @keypoints.each do |keypoint| %>
+    <%= render 'keypoint', { concept: @concept, keypoint: keypoint } %>
+  <% end %>
+
+  <div class="row-fluid">
+    <div class="col-md-offset-2 col-md-7 col-xs-offset-1 col-xs-10">
+      <%= link_to 'Add a keypoint', 'javascript:void(0)', id: 'add_a_keypoint' %>
+    </div>
+  </div>
+
+</section>
+
+<script type="text/javascript">
+  
+$('#add_a_keypoint').click(function() {
+  $('#add_a_keypoint').before("<%=j render 'keypoint', { concept: @concept, keypoint: nil } %>")
+});
+
+// resize all textarea which include the class 'resizable'
+autosize($('.resizable'));
+
+</script>

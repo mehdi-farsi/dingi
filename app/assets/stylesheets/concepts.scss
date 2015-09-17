@@ -1,0 +1,49 @@
+// Place all the styles related to the Concepts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+li, p, div, h1, h2, h3, h4, h5, input {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.header {
+  background-color: white;
+  position:fixed;
+  top:0px;
+  width:100%;
+
+  padding-bottom: 15px;
+  margin-bottom: 70px;
+
+  border-bottom: 4px solid #f1a9a0;
+  z-index: 1;
+}
+
+.concepts {
+  margin-top: 100px;
+  .title {
+    font-size: 2em
+  }
+
+  .content {
+    line-height: 1.5em;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    overflow-y: hidden;
+  }
+
+  input:not([type='submit']), textarea {
+    outline: none;
+    border: none;
+    resize:none;
+  }
+
+  .save-concept {
+    border-radius: 3px;
+  }
+}
